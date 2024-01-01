@@ -63,12 +63,13 @@ const StampPaper = () => {
       const response = await axios(config);
       console.log(response, "resp");
       toast({
+        position: "top",
         title: "Form Submitted Successfully",
         status: "success",
         duration: 3000,
         isClosable: true,
       });
-      navigate("/stamppaersubmission");
+      navigate("/stampPapersubmission");
     } catch (err) {
       console.log("err in fetching", err);
     }
