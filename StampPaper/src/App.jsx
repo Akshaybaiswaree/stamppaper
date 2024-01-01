@@ -7,11 +7,14 @@ import {
 
 
 import StampPaper from "./Component/StampPaper";
+import StampPaperSubmission from "./Component/StampPaperSubmission";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<StampPaper />} />
+      <Route path="/stampPapersubmission" element={<StampPaperSubmission />} />
+      
     </Route>
   )
 );
