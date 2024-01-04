@@ -53,7 +53,7 @@ const StampPaper = () => {
       formData.append("email", email);
       formData.append("signature", signature);
       formData.append("photo", photo);
-      // formData.append("date", date);
+       formData.append("startdate", date);
 
       const config = {
         method: "post",
