@@ -22,7 +22,7 @@ import { useNavigate } from "react-router-dom";
 const StampPaper = () => {
   const apiUrl = import.meta.env.VITE_APP_API_URL;
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
   const [photo, setPhoto] = useState(null);
@@ -48,11 +48,12 @@ const StampPaper = () => {
     try {
       const formData = new FormData();
 
-      formData.append("name", name);
-      formData.append("address", address);
+      // formData.append("name", name);
+      // formData.append("address", address);
       formData.append("email", email);
       formData.append("signature", signature);
       formData.append("photo", photo);
+      // formData.append("date", date);
 
       const config = {
         method: "post",
@@ -139,40 +140,42 @@ const StampPaper = () => {
             />
           </Box>
           <Box textAlign="center">
-            <Heading as="h2" mb={{ base: "2", lg: "4" }}>
+            <Heading fontSize={{base:"1rem" , md:"2rem"}} mb={{ base: "2", lg: "4" }}>
               Legal Employment Contract 2023
             </Heading>
 
-            <Text>
+            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>
               THIS DIGITAL EMPLOYMENT CONTRACT (this "Agreement") Valid Till
               Eleven Months From 2023-11-30 BETWEEN:
             </Text>
 
-            <Text fontSize={"1.5rem"}>
-              <strong>Zemex Service of </strong>
+            <Text >
+              <Heading fontSize={{base:"1rem" , md:"2rem"}}>Zemix Services</Heading>
             </Text>
-            <Text>
+            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>
               KASTURI WADI INDRA BAZAR GHANSHAM APARTMENT JAIPUR, RAJASTHAN
               (RJ), INDIA(IN), 302031 of
             </Text>
 
-            <Text fontSize={"1.5rem"}>
+            {/* <Text fontSize={"1.5rem"}>
               <strong>(The "Employer")</strong>
+            </Text> */}
+             <Text >
+              <Heading fontSize={{base:"1rem" , md:"2rem"}}>The "Employer"</Heading>
             </Text>
+            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>OF THE FIRST PARTY </Text>
 
-            <Text ml={{ base: "0", lg: "10%" }}>OF THE FIRST PARTY </Text>
-
-            <Text>-AND-</Text>
+            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>-AND-</Text>
             <Text>
               S/O &nbsp;... &nbsp;... &nbsp;... &nbsp;... &nbsp;... &nbsp;...
               <strong>(The "Employee")</strong>
             </Text>
-            <Text ml={{ base: "0", lg: "10%" }}>OF THE SECOND PARTY</Text>
+            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>OF THE SECOND PARTY</Text>
           </Box>
         </Box>
 
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             Background
           </Heading>
           <Text>
@@ -207,7 +210,7 @@ const StampPaper = () => {
 
         {/* Commencement Date and Term Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             <br />
             Commencement Date and Term
           </Heading>
@@ -228,7 +231,7 @@ const StampPaper = () => {
 
         {/* Job Title and Description Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             <br />
             1. Job Title and Description
           </Heading>
@@ -265,7 +268,7 @@ const StampPaper = () => {
 
         {/* Employee Remuneration Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             <br />
             2. Employee Remuneration
           </Heading>
@@ -322,7 +325,7 @@ const StampPaper = () => {
 
         {/* Conflict of Interest Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             3. Conflict of Interest
           </Heading>
           <Text>
@@ -395,7 +398,7 @@ const StampPaper = () => {
 
         {/* Termination of Employment Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             <br />
             4. Termination of Employment
           </Heading>
@@ -431,7 +434,7 @@ const StampPaper = () => {
 
         {/* Non-Solicitation Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             5. Non-Solicitation
           </Heading>
           <Text>
@@ -464,7 +467,7 @@ const StampPaper = () => {
 
         {/* Confidential Information Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             6. Confidential Information
           </Heading>
           <Text>
@@ -490,7 +493,7 @@ const StampPaper = () => {
 
         {/* Severability Section */}
         <Box>
-          <Heading as="h3" mb={4}>
+        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
             7. Severability
           </Heading>
           <Text>
