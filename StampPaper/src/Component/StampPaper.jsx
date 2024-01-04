@@ -23,7 +23,7 @@ const StampPaper = () => {
   const apiUrl = import.meta.env.VITE_APP_API_URL;
 
   const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
+  const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
   const [photo, setPhoto] = useState(null);
   const [signature, setSignature] = useState(null);
@@ -71,7 +71,7 @@ const StampPaper = () => {
       });
       navigate("/stampPapersubmission");
     } catch (err) {
-      console.log("err in fetching", err);
+      alert("Complete all the feild")
     }
   };
 
@@ -558,7 +558,7 @@ const StampPaper = () => {
             B. Employee : -
           </Text>
         </Box>
-        <FormControl w={["350px", "400px"]}>
+        {/* <FormControl w={["350px", "400px"]}>
           <FormLabel>Name</FormLabel>
           <Input
             value={name}
@@ -567,7 +567,7 @@ const StampPaper = () => {
             placeholder="Enter Name"
             _hover={{ borderColor: "teal.500" }}
           />
-        </FormControl>
+        </FormControl> */}
         <FormControl w={["350px", "400px"]}>
           <FormLabel>Email</FormLabel>
           <Input
@@ -579,12 +579,12 @@ const StampPaper = () => {
           />
         </FormControl>
         <FormControl w={["350px", "400px"]}>
-          <FormLabel>Address</FormLabel>
+          <FormLabel>Start-Date</FormLabel>
           <Input
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            type="text"
-            placeholder="Enter your Address"
+            value={date}
+            onChange={(e) =>setDate(e.target.value)}
+            type="date"
+            placeholder="Enter the Date"
             _hover={{ borderColor: "teal.500" }}
           />
         </FormControl>
