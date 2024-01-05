@@ -11,6 +11,7 @@ import {
   FormControl,
   FormLabel,
   useToast,
+  Select,
 } from "@chakra-ui/react";
 // import image from "./SVG STAM.svg";
 import image from "../Images/SVG STAM.svg";
@@ -581,7 +582,7 @@ const StampPaper = () => {
             _hover={{ borderColor: "teal.500" }}
           />
         </FormControl>
-        <FormControl w={["350px", "400px"]}>
+        {/* <FormControl w={["350px", "400px"]}>
           <FormLabel>Start-Date</FormLabel>
           <Input
             value={date}
@@ -590,7 +591,14 @@ const StampPaper = () => {
             placeholder="Enter the Date"
             _hover={{ borderColor: "teal.500" }}
           />
-        </FormControl>
+        </FormControl> */}
+        <FormControl>
+      <FormLabel>Date</FormLabel>
+      <Select width={{base:"300px" , md:"400px"}}>
+        <option value="">Today</option>
+        <option value="option2">Tomorrow</option>
+      </Select>
+    </FormControl>
 
         {/* Upload Signature and Photo Section */}
         <Table w={["300px", "700px"]} style={{ marginTop: "20px" }}>
