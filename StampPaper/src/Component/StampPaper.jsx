@@ -24,7 +24,7 @@ const StampPaper = () => {
   const apiUrl = import.meta.env.VITE_APP_API_URL;
 
   // const [name, setName] = useState("");
-  const [date, setDate] = useState("");
+ const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
   const [photo, setPhoto] = useState(null);
   const [signature, setSignature] = useState(null);
@@ -54,7 +54,7 @@ const StampPaper = () => {
       formData.append("email", email);
       formData.append("signature", signature);
       formData.append("photo", photo);
-       formData.append("startdate", date);
+        formData.append("startdate", date);
 
       const config = {
         method: "post",
@@ -582,23 +582,29 @@ const StampPaper = () => {
             _hover={{ borderColor: "teal.500" }}
           />
         </FormControl>
-        {/* <FormControl w={["350px", "400px"]}>
+        <FormControl w={["350px", "400px"]}>
           <FormLabel>Start-Date</FormLabel>
           <Input
+
             value={date}
             onChange={(e) =>setDate(e.target.value)}
             type="date"
             placeholder="Enter the Date"
             _hover={{ borderColor: "teal.500" }}
           />
-        </FormControl> */}
-        <FormControl>
+          {/* <Select width={{base:"300px" , md:"400px"}}>
+        <option value="">Today</option>
+        <option value="option2">Tomorrow</option>
+      </Select> */}
+        </FormControl>
+        
+        {/* <FormControl>
       <FormLabel>Date</FormLabel>
       <Select width={{base:"300px" , md:"400px"}}>
         <option value="">Today</option>
         <option value="option2">Tomorrow</option>
       </Select>
-    </FormControl>
+    </FormControl> */}
 
         {/* Upload Signature and Photo Section */}
         <Table w={["300px", "700px"]} style={{ marginTop: "20px" }}>
