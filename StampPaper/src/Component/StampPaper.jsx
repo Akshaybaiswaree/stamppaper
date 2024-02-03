@@ -24,7 +24,7 @@ const StampPaper = () => {
   const apiUrl = import.meta.env.VITE_APP_API_URL;
 
   // const [name, setName] = useState("");
- const [date, setDate] = useState("");
+  const [date, setDate] = useState("");
   const [email, setEmail] = useState("");
   const [photo, setPhoto] = useState(null);
   const [signature, setSignature] = useState(null);
@@ -54,7 +54,7 @@ const StampPaper = () => {
       formData.append("email", email);
       formData.append("signature", signature);
       formData.append("photo", photo);
-        formData.append("startdate", date);
+      formData.append("startdate", date);
 
       const config = {
         method: "post",
@@ -73,7 +73,7 @@ const StampPaper = () => {
       });
       navigate("/stampPapersubmission");
     } catch (err) {
-      alert("Complete all the feild")
+      alert("Complete all the feild");
     }
   };
 
@@ -141,19 +141,24 @@ const StampPaper = () => {
             />
           </Box>
           <Box textAlign="center">
-            <Heading fontSize={{base:"1rem" , md:"2rem"}} mb={{ base: "2", lg: "4" }}>
+            <Heading
+              fontSize={{ base: "1rem", md: "2rem" }}
+              mb={{ base: "2", lg: "4" }}
+            >
               Legal Employment Contract 2023
             </Heading>
 
-            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>
+            <Text fontSize={{ base: "0.8rem", md: "1rem" }}>
               THIS DIGITAL EMPLOYMENT CONTRACT (this "Agreement") Valid Till
               Eleven Months From 2023-11-30 BETWEEN:
             </Text>
 
-            <Text >
-              <Heading fontSize={{base:"1rem" , md:"2rem"}}>Zemix Services</Heading>
+            <Text>
+              <Heading fontSize={{ base: "1rem", md: "2rem" }}>
+                Zemix Services
+              </Heading>
             </Text>
-            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>
+            <Text fontSize={{ base: "0.8rem", md: "1rem" }}>
               KASTURI WADI INDRA BAZAR GHANSHAM APARTMENT JAIPUR, RAJASTHAN
               (RJ), INDIA(IN), 302031 of
             </Text>
@@ -161,24 +166,28 @@ const StampPaper = () => {
             {/* <Text fontSize={"1.5rem"}>
               <strong>(The "Employer")</strong>
             </Text> */}
-             <Text >
-              <Heading fontSize={{base:"1rem" , md:"2rem"}}>The "Employer"</Heading>
+            <Text>
+              <Heading fontSize={{ base: "1rem", md: "2rem" }}>
+                The "Employer"
+              </Heading>
             </Text>
-            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>OF THE FIRST PARTY </Text>
+            <Text fontSize={{ base: "0.8rem", md: "1rem" }}>
+              OF THE FIRST PARTY{" "}
+            </Text>
 
-            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>-AND-</Text>
+            <Text fontSize={{ base: "0.8rem", md: "1rem" }}>-AND-</Text>
             <Text>
               S/O &nbsp;... &nbsp;... &nbsp;... &nbsp;... &nbsp;... &nbsp;...
               <strong>(The "Employee")</strong>
             </Text>
-            <Text fontSize={{base:"0.8rem" , md:"1rem"}}>OF THE SECOND PARTY</Text>
+            <Text fontSize={{ base: "0.8rem", md: "1rem" }}>
+              OF THE SECOND PARTY
+            </Text>
           </Box>
         </Box>
 
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
-            Background
-          </Heading>
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>Background</Heading>
           <Text>
             A. The Employer Is Of The Opinion That The Employee Has The
             Necessary Qualifications, Experience, And Abilities To Assist And
@@ -211,7 +220,7 @@ const StampPaper = () => {
 
         {/* Commencement Date and Term Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             <br />
             Commencement Date and Term
           </Heading>
@@ -232,7 +241,7 @@ const StampPaper = () => {
 
         {/* Job Title and Description Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             <br />
             1. Job Title and Description
           </Heading>
@@ -269,7 +278,7 @@ const StampPaper = () => {
 
         {/* Employee Remuneration Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             <br />
             2. Employee Remuneration
           </Heading>
@@ -326,13 +335,16 @@ const StampPaper = () => {
 
         {/* Conflict of Interest Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             3. Conflict of Interest
           </Heading>
           <Text>
-            3.1. Application Fee(s): The Registration Amount Of 5400/- INR. Will
-            Be Deducted From The Salary If Generated, And If The Salary Is Not
-            Generated i.e If The Employee Fails To Complete The Work, Then
+            3.1Application Fee(s): A registration amount of 6800/- INR will be
+            deducted from the salary if generated. However, if the salary is not
+            generated, meaning the employee fails to complete the work, then you
+            are required to work for 5 days. If you fail to commence your work
+            after accepting it or choose to cancel it, you will be obligated to
+            pay the registration amount.
             <br />
             <br />
             He/She Is Liable Pay The Same Registration Amount On Their Own. The
@@ -399,7 +411,7 @@ const StampPaper = () => {
 
         {/* Termination of Employment Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             <br />
             4. Termination of Employment
           </Heading>
@@ -435,7 +447,7 @@ const StampPaper = () => {
 
         {/* Non-Solicitation Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             5. Non-Solicitation
           </Heading>
           <Text>
@@ -468,7 +480,7 @@ const StampPaper = () => {
 
         {/* Confidential Information Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             6. Confidential Information
           </Heading>
           <Text>
@@ -494,7 +506,7 @@ const StampPaper = () => {
 
         {/* Severability Section */}
         <Box>
-        <Heading fontSize={{base:"1rem" , md:"2rem"}}> 
+          <Heading fontSize={{ base: "1rem", md: "2rem" }}>
             7. Severability
           </Heading>
           <Text>
@@ -585,9 +597,8 @@ const StampPaper = () => {
         <FormControl w={["350px", "400px"]}>
           <FormLabel>Start-Date</FormLabel>
           <Input
-
             value={date}
-            onChange={(e) =>setDate(e.target.value)}
+            onChange={(e) => setDate(e.target.value)}
             type="date"
             placeholder="Enter the Date"
             _hover={{ borderColor: "teal.500" }}
@@ -597,7 +608,7 @@ const StampPaper = () => {
         <option value="option2">Tomorrow</option>
       </Select> */}
         </FormControl>
-        
+
         {/* <FormControl>
       <FormLabel>Date</FormLabel>
       <Select width={{base:"300px" , md:"400px"}}>
