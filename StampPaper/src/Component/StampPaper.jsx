@@ -43,6 +43,17 @@ const StampPaper = () => {
     setSignaturePreview(URL.createObjectURL(selectedSignature));
   };
 
+
+
+  const today = new Date();
+  const todayFormatted = today.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+
+  // Get tomorrow's date
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowFormatted = tomorrow.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+
+
   const toast = useToast();
   const navigate = useNavigate();
   const handleSubmit = async () => {
@@ -601,7 +612,10 @@ const StampPaper = () => {
             onChange={(e) => setDate(e.target.value)}
             type="date"
             placeholder="Enter the Date"
+            min={todayFormatted}
+            max={tomorrowFormatted}
             _hover={{ borderColor: "teal.500" }}
+          
           />
           {/* <Select width={{base:"300px" , md:"400px"}}>
         <option value="">Today</option>
